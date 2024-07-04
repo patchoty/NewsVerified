@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Add Post</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+    <style>
+         body {
+            font-family: 'Roboto', sans-serif;
+            background: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            max-width: 600px;
+            margin: 2rem auto;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+            text-align: center;
+        }
+        form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        form input[type="text"],
+        form input[type="url"],
+        form textarea,
+        form input[type="file"] {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        form button {
+            display: block;
+            width: 100%;
+            padding: 0.8rem;
+            background: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        form button:hover {
+            background: #555;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background: #333;
+            color: #fff;
+        }
+        #progressHandler {
+            display: none;
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class = "navigation-container">
+            <div class = "top-head">
+                <div class = "web-name">
+                    <h1>NewsVerified</h1>
+                </div>
+
+                <div class = "ham-btn">
+                    <span>
+                        <i class = "fas fa-bars"></i>
+                    </span>
+                </div>
+
+                <div class = "times-btn">
+                    <span>
+                        <i class = "fas fa-times"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- nav bar -->
+
+            <div class = "nav-bar" id = "nav-bar">
+                <nav>
+                    <ul>
+                        <li><a href = "index.html">Home</a></li>
+                        <li><a href = "#">Current Affairs</a></li>
+                        <li><a href = "#">Featured</a></li>
+                        <li><a href = "#">Category</a></li>
+                        <li><a href = "post.html">Posts</a></li>
+                        <li><a href = "addpost.html">Add Post</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!--social icons -->
+            <div class = "social-icons">
+                <ul>
+                    <li>
+                        <a href= "#"><i class = "fab fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href= "#"><i class = "fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href= "#"><i class = "fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href= "#"><i class = "fab fa-youtube"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main id="main">
+      
+        <a href="index.html" id="back">Back</a>
+        <form method="POST" id="createForm">
+            <h1>Create a New Post</h1>
+
+            <p>Fill the form below in order to create a new post</p>
+
+            <input type="text" id="title" placeholder="Post Title" />
+            <textarea id="content" placeholder="Post Content"></textarea>
+            <input type="url" id="link" placeholder="Article Link">
+            <input type="file" id="cover">
+            <input id="postSubmit" type="submit" value="Post">
+
+        </form>
+
+
+        <div id="progressHandler">
+            <p>Processing your Post, stand by...</p>
+            <progress id="progressBar" value="" max="100"></progress>
+        </div>
+
+        
+
+    </main>
+    <footer>
+        &copy; 2023 NewsVerified. All rights reserved.
+    </footer>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-storage.js"></script>
+    <script src="./functions/main.js"></script>
+</body>
+</html>

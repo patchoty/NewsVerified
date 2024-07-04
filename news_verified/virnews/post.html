@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Post</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="main.css">
+        <!-- google fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+        <!-- fontawesome -->
+        <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+
+        <style>
+            #posts {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+            }
+            .post{
+                width: 100%;
+                max-width: 400px;
+                margin: 10px;
+                box-shadow: 0px 10px 18px -12px rgba(97, 97, 97, 1);
+            }
+
+            .post > div {
+                display: block;
+                height: 300px;
+                background-size: 150%;
+                -webkit-box-shadow: 0px 10px 18px -12px rgba(97,97,97,1);
+                -moz-box-shadow: 0px 10px 18px -12px rgba(97,97,97,1);
+                box-shadow: 0px 10px 18px -12px rgba(97,97,97,1);
+            }
+
+
+            .post > div:hover {
+                background-size: 100%;
+
+            }
+
+            .post p {
+                margin: 10px;
+            }
+
+            .post a {
+                color: #007bff;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            .post a:hover {
+                text-decoration: underline;
+            }
+            #pagination {
+                display: none;
+                cursor: pointer;
+                border: 1px solid rgb(54, 54, 54);
+                color: rgb(54, 54, 54);
+                font-weight: bold;
+                margin: 90px auto;
+                width: 120px;
+                text-align: center;
+                padding: 10px;
+            }
+            
+        </style>
+    </head>
+<body>
+    <header>
+        <div class = "navigation-container">
+            <div class = "top-head">
+                <div class = "web-name">
+                    <h1>NewsVerified</h1>
+                </div>
+
+                <div class = "ham-btn">
+                    <span>
+                        <i class = "fas fa-bars"></i>
+                    </span>
+                </div>
+
+                <div class = "times-btn">
+                    <span>
+                        <i class = "fas fa-times"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- nav bar -->
+
+            <div class = "nav-bar" id = "nav-bar">
+                <nav>
+                    <ul>
+                        <li><a href = "index.html">Home</a></li>
+                        <li><a href = "#">Current Affairs</a></li>
+                        <li><a href = "#">Featured</a></li>
+                        <li><a href = "#">Category</a></li>
+                        <li><a href = "post.html">Posts</a></li>
+                        <li><a href = "addpost.html">Add Post</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!--social icons -->
+            <div class = "social-icons">
+                <ul>
+                    <li>
+                        <a href= "#"><i class = "fab fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href= "#"><i class = "fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href= "#"><i class = "fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href= "#"><i class = "fab fa-youtube"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main id="main">
+        <div id="posts"></div>
+
+        <div id="pagination" class="pagination">
+            Load More
+        </div>
+
+    </main>
+
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-storage.js"></script>
+    <script src="./functions/main.js"></script>
+    <footer>
+        &copy; 2023 NewsVerified. All rights reserved.
+    </footer>
+
+
+</body>
+</html>
