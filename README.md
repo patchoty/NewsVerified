@@ -1,2 +1,2 @@
 # NewsVerified
-A news website deployed in firebase
+A news web app deployed in firebase
